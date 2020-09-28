@@ -1,0 +1,77 @@
+code: pda_smart_inbox
+description: PDA Smart Inbox
+configuration:
+  frames:
+    - pos: 0
+      description: Search
+      mainFrame: false
+      sketch:
+        x1: 7
+        y1: 0
+        y2: 0
+        x2: 8
+    - pos: 1
+      description: Notifications
+      mainFrame: false
+      sketch:
+        x1: 9
+        y1: 0
+        y2: 0
+        x2: 10
+    - pos: 2
+      description: Authentication
+      mainFrame: false
+      sketch:
+        x1: 11
+        y1: 0
+        y2: 0
+        x2: 11
+    - pos: 3
+      description: User details
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 1
+        y2: 1
+        x2: 1
+    - pos: 4
+      description: Navigation
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 2
+        y2: 3
+        x2: 1
+    - pos: 5
+      description: Task list widget
+      mainFrame: false
+      sketch:
+        x1: 2
+        y1: 1
+        y2: 1
+        x2: 11
+    - pos: 6
+      description: Task details widget
+      mainFrame: false
+      sketch:
+        x1: 2
+        y1: 2
+        y2: 3
+        x2: 11
+    - pos: 7
+      description: Notes
+      mainFrame: false
+      sketch:
+        x1: 2
+        y1: 4
+        y2: 4
+        x2: 7
+    - pos: 8
+      description: Attachments
+      mainFrame: false
+      sketch:
+        x1: 8
+        y1: 4
+        y2: 4
+        x2: 11
+template: "<#assign wp=JspTaglibs[\"/aps-core\"]>\n<#assign c=JspTaglibs[\"http://java.sun.com/jsp/jstl/core\"]>\n<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\" />\n        <title>\n            <@wp.currentPage param=\"title\" /> - <@wp.i18n key=\"PORTAL_TITLE\" />\n        </title>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n        <meta name=\"description\" content=\"\" />\n        <meta name=\"author\" content=\"\" />\n\n        <@wp.fragment code=\"entando_pda_css_reset\" escapeXml=false />\n        <@wp.fragment code=\"entando_pda_import_react\" escapeXml=false />\n\n        <@wp.fragment code=\"entando_pda_shared_css_js\" escapeXml=false />\n        <@wp.fragment code=\"entando_pda_styles\" escapeXml=false />\n      \n        <link rel=\"icon\" href=\"<@wp.info key=\" systemParam\" paramName=\"applicationBaseURL\" />favicon.png\" type=\"image/png\" />\n\n        <@wp.fragment code=\"entando_pda_import_react\" escapeXml=false />\n\t\n    </head>\n\n    <body>\n        <@wp.fragment code=\"entando_keycloak_check\" escapeXml=false />\n        <div class=\"pda-content\">\n            <div class=\"pda-header\">\n                <@wp.fragment code=\"entando_pda_header\" escapeXml=false />\n            </div>\n\n            <aside class=\"pda-sidebar\">\n              \t<!-- SIDEBAR WIDGET (FRAME 2)-->\n              \t<@wp.show frame=3 />\n              \t<@wp.show frame=4 />\n              \t<!-- END OF SIDEBAR WIDGET (FRAME 2)-->\n            </aside>\n\n          \t<main class=\"pda-main\">\n                <div class=\"frame-container container\">\n                    <div class=\"row white-bg\">\n                        <div class=\"col-sm-12\">\n                          \t<@wp.show frame=5 />\n                        </div>\n                    </div>\n                </div>\n                <div class=\"frame-container container\">\n                    <div class=\"row white-bg\">\n                        <div class=\"col-sm-12\">\n    \t                    <@wp.show frame=6 />\n                        </div>\n                    </div>\n                </div>\n                <div class=\"frame-container container\">\n                    <div class=\"row white-bg\">\n                        <div class=\"col-sm-8\">\n                          \t<@wp.show frame=7/>\n                        </div>\n                        <div class=\"col-sm-4\">\n                          \t<@wp.show frame=8 />\n                        </div>\n                    </div>\n                </div>\n          \t</main>\n        </div>\n    </body>\n</html>"

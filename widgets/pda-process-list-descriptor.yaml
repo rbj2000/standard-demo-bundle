@@ -1,0 +1,13 @@
+code: pda-process-list
+titles:
+  en: PDA - Process List
+  it: PDA - Process List
+group: free
+configUi:
+  customElement: process-list-config
+  resources:
+    - entando-pda-plugin-bundle/static/js/2.19f5bd06.chunk.js
+    - entando-pda-plugin-bundle/static/js/main.f0f74b90.chunk.js
+    - entando-pda-plugin-bundle/static/js/runtime-main.19b9e25f.js
+    - entando-pda-plugin-bundle/static/css/2.4b85a2d1.chunk.css
+    - entando-pda-plugin-bundle/static/css/main.96018afc.chunk.css

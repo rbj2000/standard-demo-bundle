@@ -1,0 +1,12 @@
+code: pda_dashboard
+parentCode: landing
+titles:
+  en: PDA Dashboard
+  it: PDA Dashboard
+pageModel: pda_dashboard
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

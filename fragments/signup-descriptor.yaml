@@ -1,0 +1,15 @@
+code: signup
+guiCode: >-
+  <#assign wp=JspTaglibs[ "/aps-core"]>
+
+
+  <script async src="<@wp.resourceURL
+  />widgets/signup/form/js/runtime.js"></script>
+
+  <script async src="<@wp.resourceURL
+  />widgets/signup/form/js/vendor.js"></script>
+
+  <script async src="<@wp.resourceURL
+  />widgets/signup/form/js/main.js"></script>
+
+  <user-form/>

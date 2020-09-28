@@ -1,0 +1,12 @@
+code: login_mobile
+parentCode: landing
+titles:
+  en: Login mobile
+  it: Login mobile
+pageModel: loginpagemodel
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: draft

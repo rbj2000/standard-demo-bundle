@@ -1,0 +1,12 @@
+code: seed_insurances
+parentCode: landing
+titles:
+  en: Seed Insurances Home
+  it: Home Seed Assicurazioni
+pageModel: insurance_home
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: draft

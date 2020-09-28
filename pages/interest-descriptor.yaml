@@ -1,0 +1,12 @@
+code: interest
+parentCode: landing
+titles:
+  en: Interest Checking
+  it: Interest Checking
+pageModel: seed_home
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

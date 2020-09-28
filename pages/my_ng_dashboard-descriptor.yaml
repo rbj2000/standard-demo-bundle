@@ -1,0 +1,12 @@
+code: my_ng_dashboard
+parentCode: landing
+titles:
+  en: My NG Dashboard
+  it: My NG Dashboard
+pageModel: ng_dashboard
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

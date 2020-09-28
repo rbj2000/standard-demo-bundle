@@ -1,0 +1,57 @@
+code: seed-user-form
+guiCode: |
+  <div class="UserForm">
+      <div class="row h-100">
+          <div class="col-sm-12 my-auto">
+              <div class="card card-block UserForm__wrapper mx-auto">
+
+                  <form class="text-center border border-light p-5" action="#!">
+
+                      <p class="h4 mb-4">Registration</p>
+
+                      <div class="form-row mb-4">
+                          <div class="col">
+                              <!-- First name -->
+                              <input type="text" id="UserFormFirstName" class="form-control" placeholder="First name">
+                          </div>
+                          <div class="col">
+                              <!-- Last name -->
+                              <input type="text" id="UserFormLastName" class="form-control" placeholder="Last name">
+                          </div>
+                      </div>
+
+
+                      <!-- E-mail -->
+                      <input type="email" id="UserFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                      <!-- Username -->
+                      <input type="text" id="UserFormUsername" class="form-control mb-4" placeholder="Username">
+
+                      <!-- Password -->
+                      <input type="password" id="UserFormPassword" class="form-control" placeholder="Password" aria-describedby="UserFormPasswordHelpBlock">
+                      <small id="UserFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                          At least 8 characters and 1 digit
+                      </small>
+
+                      <!-- Sign up -->
+                      <button class="btn sign-in my-4 btn-block" type="submit">Sign up</button>
+
+                      <!-- Social register -->
+                      <p>or sign up with:</p>
+
+                      <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f UserForm--icon"></i></a>
+                      <a href="#" class="mx-2" role="button"><i class="fab fa-twitter UserForm--icon"></i></a>
+                      <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in UserForm--icon"></i></a>
+                      <a href="#" class="mx-2" role="button"><i class="fab fa-github UserForm--icon"></i></a>
+
+                      <hr>
+
+                      <!-- Terms of service -->
+                      <p>By clicking
+                          <em>Sign up</em> you agree to our
+                          <a href="" target="_blank">terms of service</a>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>   

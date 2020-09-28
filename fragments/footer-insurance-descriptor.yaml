@@ -1,0 +1,2 @@
+code: footer-insurance
+guiCode: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n<div class=\"footer\">\r\n            <div class=\"half-side\">  \r\n                <p>All Rights Reserved by Seed @2020</p>\r\n                <p>Seed, Inc. | NMLS #: 000000 | Licenses | NMLS Consumer Access</p>\r\n                <p>Deposits are FDIC insured to at least $250,000 through Seed, Inc. Member FDIC.</p>\r\n            </div>\r\n\r\n            <div class=\"half-side\">  \r\n                <img src=\"<@wp.imgURL />insurance-logo.svg\" />\r\n            </div>\r\n</div>"

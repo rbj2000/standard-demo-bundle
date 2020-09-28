@@ -1,0 +1,4 @@
+id: 103
+contentType: MPC
+description: Multi-Purpose Card for 3 Columns  List
+contentShape: "<div class=\"card-insurance\">\r\n    <img src=\"$content.image.getImagePath('0')\"  alt=\"$content.image.text\">\r\n    \r\n     $content.title.text\r\n     $content.subtitle.text\r\n     $content.body.text\r\n\r\n    #if($content.links.size() > 0)\r\n    #foreach ($item in $content.links)     \r\n    <a class=\"btn btn-green\" href=\"$item.destination\" >$item.text</a>\r\n    #end\r\n    #end\r\n</div>"

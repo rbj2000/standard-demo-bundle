@@ -1,0 +1,2 @@
+code: back_to_seed
+guiCode: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n\r\n<@wp.currentWidget param=\"config\" configParam=\"name\" var=\"configName\" />\r\n<a class=\"btn go-back\" href=\"<@wp.url page=\"homepage\" />\"  >\r\n        <@wp.i18n key=\"GO_SEED_BANK\" />\r\n  </a>"

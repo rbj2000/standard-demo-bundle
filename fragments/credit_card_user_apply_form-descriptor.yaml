@@ -1,0 +1,17 @@
+code: credit_card_user_apply_form
+guiCode: >-
+  <#assign wp=JspTaglibs[ "/aps-core"]>
+
+  <link rel="stylesheet" type="text/css" href="<@wp.resourceURL
+  />widgets/creditCardApplyForm/css/main.css">
+
+  <script async src="<@wp.resourceURL
+  />widgets/creditCardApplyForm/js/runtime.js"></script>
+
+  <script async src="<@wp.resourceURL
+  />widgets/creditCardApplyForm/js/vendor.js"></script>
+
+  <script async src="<@wp.resourceURL
+  />widgets/creditCardApplyForm/js/main.js"></script>
+
+  <credit-card-user-form />

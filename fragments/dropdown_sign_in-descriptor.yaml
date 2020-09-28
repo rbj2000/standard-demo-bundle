@@ -1,0 +1,85 @@
+code: dropdown_sign_in
+guiCode: >-
+  <#assign wp=JspTaglibs["/aps-core"]>
+
+
+  <#if (Session.currentUser != "guest")>
+
+  <div class="btn-group login-group">
+      <button type="button" class="btn login dropdown-toggle px-3" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+          ${Session.currentUser} <span class="sr-only">${Session.currentUser}</span>
+      </button>
+      <div class="dropdown-menu login-drop">
+
+          <@wp.ifauthorized permission="enterBackend">
+          <a class="dropdown-item" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+             <@wp.i18n key="ESLF_ADMINISTRATION" />
+      </a>
+      </@wp.ifauthorized>
+      <a class="dropdown-item"  href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">       
+         <@wp.i18n key="ESLF_SIGNOUT" />
+  </a>
+
+
+  <@wp.pageWithWidget var="editProfilePageVar"
+  widgetTypeCode="userprofile_editCurrentUser" />
+
+  <#if (editProfilePageVar??) >
+
+  <a class="dropdown-item" href="<@wp.url page="${editProfilePageVar.code}" />"
+  ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+
+  </#if>
+
+  </div>
+
+  </div>
+
+
+  <a class="dropdown-item d-none d-sm-block d-md-none"
+     ${Session.currentUser} <span class="sr-only">${Session.currentUser}</span>
+  </a>
+
+
+  <#else>
+
+
+  <div class="btn-group login-drop">
+      <button type="button" class="btn login dropdown-toggle mr-3" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+          <@wp.i18n key="ESLF_SIGNIN" />
+      </button>
+      <a class="btn sign-up " href="<@wp.url page="sign_up" />" >
+         <@wp.i18n key="SIGN_UP" />
+  </a>
+
+  <div class="dropdown-menu">
+      <form method="POST">
+          <#if (accountExpired?? && accountExpired == true)>
+          <div class="alert alert-danger m-2" role="alert">
+              <button class="close" data-dismiss="alert">x</button>
+              <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+          </div>
+          </#if>
+          <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+          <div class="alert alert-danger m-2" role="alert">
+              <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+          </div>
+          </#if>
+          <div class="md-form mb-2 px-5">
+              <i class="fas fas fa-user prefix grey-text"></i>
+              <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+          </div>
+
+          <div class="md-form mb-2 px-5">
+              <i class="fas fa-lock prefix grey-text"></i>
+              <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+          </div>
+          <div class="d-flex justify-content-center">
+              <input type="submit" class="btn login btn-sm" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+          </div>
+      </form>
+  </div>
+
+  </div>
+
+  </#if>

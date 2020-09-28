@@ -1,0 +1,13 @@
+code: loginpagemodel
+description: Login page model
+configuration:
+  frames:
+    - pos: 0
+      description: Form frame
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 0
+        y2: 0
+        x2: 11
+template: "<#assign wp=JspTaglibs[\"/aps-core\"]>\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<html>\n<head>\n\t<title><@wp.currentPage param=\"title\" /></title>\n  <link rel=\"icon\" href=\"<@wp.info key=\"systemParam\" paramName=\"applicationBaseURL\" />favicon.png\" type=\"image/png\" />\n\n  <script src=\"http://quickshift-kc-sales-demo.lab.entando.org/auth/js/keycloak.js\"></script>\n  <script>\n    const keycloak = Keycloak('/entando-de-app/keycloak.json');\n    function createKcDispatcher(payload) {\n      return () =>\n        window.dispatchEvent(\n          new CustomEvent(\"keycloak\", { detail: payload })\n        );\n    }\n    keycloak.onReady = createKcDispatcher({ eventType: \"onReady\" });\n    keycloak.onAuthSuccess = createKcDispatcher({\n      eventType: \"onAuthSuccess\"\n    });\n    keycloak.onAuthError = createKcDispatcher({\n      eventType: \"onAuthError\"\n    });\n    keycloak.onAuthRefreshSuccess = createKcDispatcher({\n      eventType: \"onAuthRefreshSuccess\"\n    });\n    keycloak.onAuthRefreshError = createKcDispatcher({\n      eventType: \"onAuthRefreshError\"\n    });\n    keycloak.onAuthLogout = createKcDispatcher({\n      eventType: \"onAuthLogout\"\n    });\n    keycloak.onTokenExpired = createKcDispatcher({\n      eventType: \"onTokenExpired\"\n    });\n    const onInit = createKcDispatcher({ eventType: \"onInit\" });\n    window.entando = {\n      ...(window.entando || {}),\n      keycloak\n    };\n    window.entando.keycloak.init({ onLoad: \"check-sso\" }).success(onInit);\n  </script>\n</head>\n<body>\n<div><@wp.show frame=0 /></div>\n</body>\n</html>"

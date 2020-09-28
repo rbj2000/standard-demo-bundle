@@ -1,0 +1,2 @@
+code: brand_insurance
+guiCode: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n<@wp.currentWidget param=\"config\" configParam=\"name\" var=\"configName\" />\r\n<a class=\"logo-insurance navbar-brand\" href=\"<@wp.url page=\"homepage\" />\" name=\"insurance-logo.svg\" >\r\n        <img src=\"<@wp.imgURL />insurance-logo.svg\" />\r\n  </a>"

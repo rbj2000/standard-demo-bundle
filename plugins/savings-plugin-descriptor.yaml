@@ -1,0 +1,7 @@
+name: savings-plugin
+image: 'entandodemo/savings:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - savings-admin
+  - savings-admin

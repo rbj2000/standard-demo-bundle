@@ -1,0 +1,7 @@
+name: checking-plugin
+image: 'entandodemo/checking:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - checking-admin
+  - checking-admin

@@ -1,0 +1,7 @@
+name: creditcardtransaction-plugin
+image: 'entandodemo/creditcardtransaction:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - creditcardtransaction-admin
+  - creditcardtransaction-admin

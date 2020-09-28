@@ -1,0 +1,4 @@
+id: 107
+contentType: PRD
+description: Products 3 Columns  List with categories
+contentShape: "<div class=\"card-insurance with-categories\">\r\n    <a href=\"$content.getContentOnPageLink('product_details')&modelId=108\" class=\"card-clickable\">\r\n\r\n        <img src=\"$content.image.getImagePath('0')\"  alt=\"$content.image.text\">\r\n\r\n        <div class=\"category\">\r\n            #foreach ($contentCategory in $content.getCategories())\r\n            $contentCategory.title\r\n            #end \r\n        </div>\r\n\r\n        <p>$content.title.text</p>\r\n        $content.subtitle.text\r\n\r\n\r\n    </a> \r\n</div>\r\n<script>\r\n\r\n    $('.category').each(function() {\r\n    var text = $(this).text();\r\n    $(this).text(text.replace('My Product', '')); \r\n    });\r\n\r\n</script>"

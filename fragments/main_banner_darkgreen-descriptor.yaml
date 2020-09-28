@@ -1,0 +1,21 @@
+code: main_banner_darkgreen
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+
+  <div class="main-banner-darkgreen ">
+              <div class="row">
+                  <div class="col-lg-6 col-xs-12">
+                      <div class="text-wrapper">
+                          <h1>Financial Health Dashboard</h1>
+                          <p>Take charge of your finances. Stay informed of your cash and savings, and know where your money is going so you can invest your money where you want it to go. Seed automatically organizes the data from all of your Seed accounts so you can see how much and where your money is being spent.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-xs-12">
+                      <div class="col-md-12 col-xs-12">
+                          <div class="centered-image">
+                              <img  src="<@wp.imgURL />dashboard.png"  />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>

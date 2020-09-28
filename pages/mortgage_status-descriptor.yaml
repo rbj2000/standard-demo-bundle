@@ -1,0 +1,12 @@
+code: mortgage_status
+parentCode: landing
+titles:
+  en: Mortgage Status
+  it: Mortgage Status
+pageModel: process_list
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

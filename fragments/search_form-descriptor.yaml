@@ -1,0 +1,2 @@
+code: search_form
+guiCode: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n<@wp.pageWithWidget var=\"searchResultPageVar\" widgetTypeCode=\"search_result\" />\r\n<form class=\"navbar-search \" action=\"<#if (searchResultPageVar??) ><@wp.url page=\"${searchResultPageVar.code}\" /></#if>\" method=\"get\">\r\n<i class=\"fas fa-search\"></i>\r\n<input type=\"text\" name=\"search\" class=\"search-query\" placeholder=\"<@wp.i18n key=\"ESSF_SEARCH\" />\" />\r\n</form>"

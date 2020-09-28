@@ -1,0 +1,11 @@
+code: list_item
+titles:
+  en: List item
+  it: Elemento lista
+group: free
+configUi:
+  customElement: list-item-config
+  resources:
+    - widgets/list-item/config/js/runtime.js
+    - widgets/list-item/config/js/vendor.js
+    - widgets/list-item/config/js/main.js

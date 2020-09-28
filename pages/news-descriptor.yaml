@@ -1,0 +1,12 @@
+code: news
+parentCode: landing
+titles:
+  en: news
+  it: notizie
+pageModel: portal_example
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

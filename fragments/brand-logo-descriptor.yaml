@@ -1,0 +1,8 @@
+code: Brand-Logo
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+  <@wp.currentWidget param="config" configParam="name" var="configName" />
+  <a class="logo" href="<@wp.url page="homepage" />" name="seed-logo.svg" >
+         <#-- <img src="<@wp.imgURL />seed-logo.svg" /> -->
+          <img src="<@wp.imgURL />seed-logo.svg" />
+    </a>

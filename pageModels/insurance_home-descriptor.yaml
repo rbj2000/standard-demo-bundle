@@ -1,0 +1,146 @@
+code: insurance_home
+description: Insurance pages
+configuration:
+  frames:
+    - pos: 0
+      description: go Seed Home
+      mainFrame: false
+      defaultWidget:
+        code: back_to_seed
+        properties: null
+      sketch:
+        x1: 0
+        y1: 0
+        y2: 0
+        x2: 1
+    - pos: 1
+      description: search bar
+      mainFrame: false
+      defaultWidget:
+        code: search_form
+        properties: null
+      sketch:
+        x1: 8
+        y1: 0
+        y2: 0
+        x2: 9
+    - pos: 2
+      description: choose language
+      mainFrame: false
+      defaultWidget:
+        code: language_choose
+        properties: null
+      sketch:
+        x1: 10
+        y1: 0
+        y2: 0
+        x2: 11
+    - pos: 3
+      description: brand logo
+      mainFrame: false
+      defaultWidget:
+        code: brand_insurance
+        properties: null
+      sketch:
+        x1: 0
+        y1: 1
+        y2: 1
+        x2: 1
+    - pos: 4
+      description: Navigation bar
+      mainFrame: false
+      sketch:
+        x1: 6
+        y1: 1
+        y2: 1
+        x2: 8
+    - pos: 5
+      description: Insurance login
+      mainFrame: false
+      defaultWidget:
+        code: insurance_login
+        properties: null
+      sketch:
+        x1: 9
+        y1: 1
+        y2: 1
+        x2: 11
+    - pos: 6
+      description: breadcrumb
+      mainFrame: false
+      defaultWidget:
+        code: Breadcrumb
+        properties: null
+      sketch:
+        x1: 0
+        y1: 2
+        y2: 2
+        x2: 11
+    - pos: 7
+      description: 100% column
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 3
+        y2: 4
+        x2: 11
+    - pos: 8
+      description: 100% column
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 5
+        y2: 6
+        x2: 11
+    - pos: 9
+      description: 100% column
+      mainFrame: true
+      sketch:
+        x1: 0
+        y1: 7
+        y2: 8
+        x2: 11
+    - pos: 10
+      description: 100% column
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 9
+        y2: 10
+        x2: 11
+    - pos: 11
+      description: 100% column
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 11
+        y2: 12
+        x2: 11
+    - pos: 12
+      description: 100% column
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 13
+        y2: 14
+        x2: 11
+    - pos: 13
+      description: Footer
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 15
+        y2: 15
+        x2: 11
+    - pos: 14
+      description: Footer
+      mainFrame: false
+      defaultWidget:
+        code: footer-insurance
+        properties: null
+      sketch:
+        x1: 0
+        y1: 16
+        y2: 16
+        x2: 11
+template: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n<#assign c=JspTaglibs[\"http://java.sun.com/jsp/jstl/core\"]>\r\n\r\n<html lang=\"en\">\r\n    <head>\r\n        <meta charset=\"utf-8\" />\r\n        <title>\r\n            <@wp.currentPage param=\"title\" /> - <@wp.i18n key=\"SALES_INSURANCE\" />\r\n        </title>\r\n        <meta name=\"viewport\" content=\"width=device-width,  user-scalable=no\" />\r\n        <meta name=\"description\" content=\"\" />\r\n        <meta name=\"author\" content=\"\" />\r\n        <link rel=\"icon\" href=\"<@wp.info key=\"systemParam\" paramName=\"applicationBaseURL\" />favicon.png\" type=\"image/png\" />\r\n             <!-- <@wp.fragment code=\"keycloak\" escapeXml=false/>-->\r\n              <@wp.fragment code=\"insurance_inclusions\" escapeXml=false />\r\n\r\n    </head>\r\n    <body class=\"insurance\">\r\n\r\n        <!--Navbar-->\r\n        <nav class=\"navbar first-nav navbar-expand-lg navbar-light \">\r\n\r\n            <!-- Collapsible content -->\r\n            <div class=\"collapse navbar-collapse navbars\" id=\"basicExampleNav\">\r\n                <div class=\"first-header\">\r\n                    <div class=\"back-button\">\r\n                        <@wp.show frame=0 />\r\n                    </div>\r\n                    <div class=\"search-language\">\r\n                        <@wp.show frame=1 />\r\n                        <@wp.show frame=2 />\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- Collapsible content -->\r\n\r\n        </nav>\r\n        <nav class=\"navbar second-nav navbar-expand-lg navbar-light \">\r\n\r\n            <@wp.show frame=3 />\r\n\r\n            <!-- Collapse button -->\r\n            <button class=\"navbar-toggler ml-auto\" type=\"button\" data-toggle=\"collapse\" data-target=\".navbars\" aria-controls=\"basicExampleNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n                <span class=\"navbar-toggler-icon\"></span>\r\n            </button>\r\n\r\n            <!-- Collapsible content -->\r\n            <div class=\"collapse navbar-collapse navbars\" id=\"basicExampleNav2\">\r\n\r\n                <@wp.show frame=4 />\r\n\r\n                <!-- Links -->\r\n                <ul class=\"navbar-nav ml-auto\">\r\n                    <@wp.show frame=5 />\r\n                </ul>\r\n                \r\n                <div class=\"d-block d-sm-block d-md-none \">\r\n                    <@wp.show frame=1 />\r\n                    <@wp.show frame=2 />\r\n                </div>\r\n\r\n            </div>\r\n            <!-- Collapsible content -->\r\n\r\n        </nav>\r\n        <!--/.Navbar-->\r\n\r\n        <@wp.show frame=6 />\r\n        <@wp.show frame=7 />\r\n        <@wp.show frame=8 />\r\n        <@wp.show frame=9 />\r\n        <@wp.show frame=10 />\r\n        <@wp.show frame=11 />\r\n        <@wp.show frame=12 />\r\n        <@wp.show frame=13 />\r\n        <@wp.show frame=14 />\r\n\r\n        <@wp.fragment code=\"insurance_inclusions_footer\" escapeXml=false />\r\n\r\n    </body>\r\n</html>\r\n"

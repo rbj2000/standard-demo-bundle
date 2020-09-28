@@ -1,0 +1,7 @@
+name: checkingtransaction-plugin
+image: 'entandodemo/checkingtransaction:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - checkingtransaction-admin
+  - checkingtransaction-admin

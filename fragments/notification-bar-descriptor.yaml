@@ -1,0 +1,149 @@
+code: Notification-Bar
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+
+  <div class="NotificationBar">
+                          <div class="NotificationBar__btn">
+                              <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Frametransfer.png" />
+                              Transfer Money
+                          </div>
+                          <div class="NotificationBar__btn">
+                              <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Framepay.png" />
+
+                              Pay bills
+                          </div>
+                          <div class="NotificationBar__btn">
+                              <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Framemoney.png" />
+
+                              Send money
+                          </div>
+                          <div class="NotificationBar__btn">
+                              <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Frameinvest.png" />
+
+                              Investments
+                          </div>
+                          <div class="NotificationBar__btn">
+                              <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Framestatements.png" />
+                              <button type="button" class="btn NotificationBar__modal" data-toggle="modal" data-target="#modal2">
+                                  View statements
+                                  <span class="badge badge-danger ml-2 NotificationBar__counter">1</span>
+                              </button>
+
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                   aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Statements</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="row" >
+                                                  <div class="col-12" >
+                                                      <table class="Table__notification table table-responsive">
+
+                                                          <thead>
+                                                              <tr>
+                                                                  <th>Date</th>
+                                                                  <th>Description</th>
+                                                                  <th>Amount</th>
+                                                                  <th>file</th>
+                                                              </tr>
+                                                          </thead>
+
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td>02/27/20</td>
+                                                                  <td>Mobile Gas Station</td>
+                                                                  <td>$34.56</td>
+                                                                  <td>
+                                                                      <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank"
+                                                                         <img src="<@wp.imgURL />dashboard/Framestatements.png" /> <i class="fas fa-file-download"></i>
+                                                                      </a>
+                                                                  </td>
+                                                              </tr>
+
+                                                          </tbody>
+                                                      </table>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn login btn-sm" data-dismiss="modal">Close</button>
+                                            
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+
+                          <div class="NotificationBar__btn">
+                              <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Frametransfer.png" />
+
+                              <button type="button" class="btn NotificationBar__modal" data-toggle="modal" data-target="#madal1">
+                                  Manage alerts
+                                  <span class="badge badge-danger ml-2 NotificationBar__counter">3</span>
+                              </button>
+
+
+                              <!-- Modal -->
+                              <div class="modal  fade" id="madal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                   aria-hidden="true">
+                                  <div class="modal-dialog"  role="document">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Manage alerts</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="row" >
+                                                  <div class="col-12" >
+                                                      <!--<div class="table-wrapper-scroll-y my-custom-scrollbar">-->
+                                                      <table class="Table__notification table table-responsive">
+
+                                                          <thead>
+                                                              <tr>
+                                                                  <th>Date</th>
+                                                                  <th>Description</th>
+                                                                  <th>Amount</th>
+                                                              </tr>
+                                                          </thead>
+
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td>02/27/20</td>
+                                                                  <td>Mobile Gas Station</td>
+                                                                  <td>$34.56</td>
+                                                              </tr>
+                                                              <tr>
+                                                                  <td>02/27/20</td>
+                                                                  <td>Mobile Gas Station</td>
+                                                                  <td>$34.56</td>
+                                                              </tr>
+                                                              <tr>
+                                                                  <td>02/27/20</td>
+                                                                  <td>Mobile Gas Station</td>
+                                                                  <td>$34.56</td>
+                                                              </tr>
+                                                          </tbody>
+                                                      </table>
+                                                      <!--</div>-->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn login btn-sm" data-dismiss="modal">Close</button>
+                                          
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>

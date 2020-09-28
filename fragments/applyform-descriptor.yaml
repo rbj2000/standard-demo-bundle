@@ -1,0 +1,38 @@
+code: applyform
+guiCode: |-
+  <div class="ApplyForm">
+      <div class="row ">
+          <div class="col-sm-12 my-auto">
+              <div class="ApplyForm__wrapper mx-auto">
+                  <form class="ApplyForm__form" action="#!">
+                      <p class="ApplyForm__title  h4 mb-4">Let’s get started</p>
+
+                      <div class="form-row mb-2">
+                          <div class="col-12 col-lg-6">
+                              <label>First name </label>
+                              <input type="text" id="ApplyFormFirstName" class="form-control" placeholder="First name">
+                          </div>
+                          <div class="col-12 col-lg-6">
+                             <label> Last name </label>
+                              <input type="text" id="ApplyFormLastName" class="form-control" placeholder="Last name">
+                          </div>
+                      </div>
+
+                      <div class="form-row mb-4">
+                          <div class="col-12 col-lg-6">
+                             <label> Phone number </label>
+                              <input type="text" id="ApplyFormFirstName" class="form-control" placeholder="First name">
+                          </div>
+                          <div class="col-12 col-lg-6">
+                              <label>Email</label>
+                              <input type="text" id="ApplyFormLastName" class="form-control" placeholder="Last name">
+                          </div>
+                      </div>
+                      <div class="col-sm-12 text-center">
+                          <button type="submit" class="btn apply my-3 " type="submit">Apply now</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>

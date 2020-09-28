@@ -1,0 +1,7 @@
+name: savingstransaction-plugin
+image: 'entandodemo/savingstransaction:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - savingstransaction-admin
+  - savingstransaction-admin

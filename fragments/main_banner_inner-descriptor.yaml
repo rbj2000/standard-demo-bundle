@@ -1,0 +1,25 @@
+code: main_banner_inner
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+
+  <div class="main-banner-12">
+              <div class="main-banner-12-inner-wrapper">
+
+                  <div class="row">
+                      <div class="col-xs-12 col-lg-6">
+                          <div class="text-wrapper-inner">
+                              <h2>Earn interest on your checking account at 16x the national average*</h2>
+                              <p>Get up to 1.90% APY with a FDIC insured checking or savings account.</p>
+                              <p class="fine-print">* Rates based on the weekly rate cap from the FDIC for the week of February 10, 2020.</p>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-6 col-xs-12">
+                          <div class="centered-image">
+                              <img src="<@wp.imgURL />infographic.png"  />
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>

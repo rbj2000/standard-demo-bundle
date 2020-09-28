@@ -1,0 +1,77 @@
+code: main_banner_accordion
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+
+  <div class="main-banner-accordion">
+              <div class="row">
+                  <div class="col-lg-6 col-xs-12">
+                      <div class="text-wrapper">
+                          <h1>Helping You Reach Financial Freedom</h1>
+                          <p>It?s easier to make money once you have money. But how do you get there? At Seed, we help you build savings, and get your money to work for you.</p>
+                          <div class="col-md-12 col-xs-12">
+                              <img  class="img-footer "  src="<@wp.imgURL />potted-plants.png"  />
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-6 col-xs-12">
+
+                      <div class="accordion md-accordion " id="accordion-seed" role="tablist" aria-multiselectable="true">
+                          <div class="card">
+                              <div class="card-header" role="tab" id="headingOne1">
+                                  <a data-toggle="collapse" data-parent="#accordion-seed" href="#collapse-one" aria-expanded="true" aria-controls="collapse-one">
+                                      <h2 class="mb-0">
+                                          <span class=" rotate-icon"></span><div class="card-header-left-margin"> Save</div>  
+                                      </h2>
+                                  </a>
+                              </div>
+
+                              <div id="collapse-one" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordion-seed">
+                                  <div class="card-body">
+                                      <h3>No Hidden Fees</h3>
+                                      <p>No monthly service fees, minimum balance fees, or overdraft fees. Get peace of mind knowing that your money in the bank stays in the bank, and you?re not getting hit by hidden charges.<br/>
+                                          Get instant alerts whenever a fee is charged to your account, and know up front what fees we do charge for.</p>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="card">
+                              <div class="card-header" role="tab" id="headingTwo2">
+                                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion-seed" href="#collapse-two" aria-expanded="false" aria-controls="collapse-two">
+                                      <h2 class="mb-0">
+                                          <span class=" rotate-icon"></span><div class="card-header-left-margin"> Grow</div>
+                                      </h2>
+                                  </a>
+                              </div>
+
+
+                              <div id="collapse-two" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordion-seed">
+                                  <div class="card-body">
+                                      <h3>Get Paid to Bank with Us</h3>
+                                      <p>Put money in your pocket. Earn 1.00% APY on our basic checking account, and automatically earn more as your average monthly balance increases. Always get a return on your money with Seed checking and savings.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+
+                              <div class="card-header" role="tab" id="headingThree3">
+                                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion-seed" href="#collapse-three"
+                                     aria-expanded="false" aria-controls="collapse-three">
+                                      <h2 class="mb-0">
+                                          <span class=" rotate-icon"></span> <div class="card-header-left-margin">Earn</div>
+                                      </h2>
+                                  </a>
+                              </div>
+
+                              <div id="collapse-three" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordion-seed">
+                                  <div class="card-body">
+                                      <h3>Save for What Matters</h3>
+                                      <p>Whether you?re saving for your wedding, investing in a new business, or preparing for retirement, having a clear goal will help you take concrete steps to achieve it.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>

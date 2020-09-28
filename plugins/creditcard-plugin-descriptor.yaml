@@ -1,0 +1,7 @@
+name: creditcard-plugin
+image: 'entandodemo/creditcard:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - creditcard-admin
+  - creditcard-admin

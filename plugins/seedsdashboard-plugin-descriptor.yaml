@@ -1,0 +1,8 @@
+name: seedsdashboard-plugin
+image: 'entandodemo/dashboardpage:0.0.1-SNAPSHOT'
+dbms: postgresql
+healthCheckPath: /management/health
+roles:
+  - seedsdashboard-admin
+  - statement-admin
+  - alert-admin

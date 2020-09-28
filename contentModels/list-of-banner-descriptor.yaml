@@ -1,0 +1,4 @@
+id: 16
+contentType: BNR
+description: List of Banner
+contentShape: "<div class=\"default-list-model\">\r\n    <div class=\"row no-gutters\">\r\n\r\n        #if ($content.img.getImagePath('0') != \"\")\r\n        <div class=\"col-md-1 col-2 img-box\">\r\n            <img class=\"rounded img-fluid\" src=\"$content.img.getImagePath('0')\" alt=\"$content.img.text\" />\r\n        </div>\r\n        #end\r\n\r\n\r\n        <div class=\"col-md-11 col-10 info-box\">\r\n            <h3>$content.title.text</h3>\r\n            <p>$content.subtitle.text</p>\r\n\r\n            <a href=\"$content.getContentOnPageLink(\"detail_page\")&modelId=17\" class=\"btn apply\">\r\n               $i18n.getLabel(\"READ_MORE\")\r\n        </a>\r\n    </div>\r\n</div>\r\n</div>"

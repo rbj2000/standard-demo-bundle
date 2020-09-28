@@ -1,0 +1,12 @@
+code: search_result
+parentCode: landing
+titles:
+  en: Search Result
+  it: Risultato ricerca
+pageModel: portal_example
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

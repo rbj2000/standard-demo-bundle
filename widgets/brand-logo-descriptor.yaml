@@ -1,0 +1,11 @@
+code: Brand-Logo
+titles:
+  en: Brand Logo
+  it: Brand Logo
+group: free
+configUi:
+  customElement: logo-config
+  resources:
+    - widgets/logo-config/runtime.js
+    - widgets/logo-config/vendor.js
+    - widgets/logo-config/main.js

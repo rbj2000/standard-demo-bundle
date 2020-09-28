@@ -1,0 +1,4 @@
+code: angular
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+  <script src="<@wp.resourceURL />libs/angular.js"></script>

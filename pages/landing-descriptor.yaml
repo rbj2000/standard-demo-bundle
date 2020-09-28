@@ -1,0 +1,12 @@
+code: landing
+parentCode: landing
+titles:
+  en: Home
+  it: Home
+pageModel: seed_home
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf8
+status: published

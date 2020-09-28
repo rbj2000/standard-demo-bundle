@@ -1,0 +1,12 @@
+code: detail_page
+parentCode: landing
+titles:
+  en: Detail Page
+  it: Pagina dettaglio
+pageModel: portal_example
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

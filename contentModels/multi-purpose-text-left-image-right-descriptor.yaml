@@ -1,0 +1,4 @@
+id: 104
+contentType: MPC
+description: Multi-Purpose Text Left - Image Right
+contentShape: "<section class=\"image-on-right\" style=\"background:#184437\">\r\n    <div class=\"content-text-wrapper\">\r\n        <div class=\"box-centered\">\r\n\r\n            <h2> $content.title.text</h2>\r\n\r\n            <div class=\"body\">$content.body.text</div>\r\n\r\n            #foreach ($item in $content.links)     \r\n            <a class=\"btn btn-green\" href=\"$item.destination\" >$item.text</a>\r\n            #end\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"img-wrapper\">\r\n        <div class=\"img_right\">\r\n            <figure>\r\n                <img src=\"$content.image.getImagePath('0')\" alt=\"$content.image.text\">\r\n            </figure>\r\n        </div>\r\n    </div>\r\n</section>"

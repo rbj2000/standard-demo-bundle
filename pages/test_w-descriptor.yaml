@@ -1,0 +1,12 @@
+code: test_w
+parentCode: landing
+titles:
+  en: test-w
+  it: test-w
+pageModel: simple_page
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: unpublished

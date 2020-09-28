@@ -1,0 +1,12 @@
+code: dashboard
+parentCode: landing
+titles:
+  en: My dashboard
+  it: La mia Dashboard
+pageModel: dashboard
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

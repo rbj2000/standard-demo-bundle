@@ -1,0 +1,11 @@
+code: transfer_money_angular
+titles:
+  en: Transfer Money angular
+  it: Transfer Money angular
+group: free
+configUi:
+  customElement: my-widget-config
+  resources:
+    - widgets/angular/list-item/config/runtime.js
+    - widgets/angular/list-item/config/vendor.js
+    - widgets/angular/list-item/config/main.js

@@ -1,0 +1,12 @@
+code: manage_users
+parentCode: landing
+titles:
+  en: Manage Users
+  it: Manage Users
+pageModel: seed_home
+ownerGroup: free
+joinGroups: []
+displayedInMenu: false
+seo: false
+charset: utf-8
+status: published

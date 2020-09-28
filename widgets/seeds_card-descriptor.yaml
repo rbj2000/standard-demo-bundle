@@ -1,0 +1,11 @@
+code: seeds_card
+titles:
+  en: Seeds Card
+  it: Seeds Card
+group: free
+configUi:
+  customElement: seeds-card-config
+  resources:
+    - widgets/seeds-card-config/static/js/runtime.js
+    - widgets/seeds-card-config/static/js/vendor.js
+    - widgets/seeds-card-config/static/js/main.js

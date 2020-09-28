@@ -1,0 +1,166 @@
+code: Checking-Table
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+  <div class="col-12" >
+                          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                              <table id="DtTable__Notification" class="Table__notification table table-responsive" cellspacing="0" width="100%">
+                                  <thead>
+                                      <tr>
+                                          <th class="th-sm">date
+                                          </th>
+                                          <th class="th-sm">descrition
+                                          </th>
+                                          <th class="th-sm">amount
+                                          </th>
+                                          <th class="th-sm">balance
+                                          </th>
+
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$383.21 </td>
+                                      </tr>
+                                      <tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$483.21 </td>
+                                      </tr>
+                                      <tr>
+                                          <td>02/27/20</td>
+                                          <td>Seven Eleven</td>
+                                          <td>$34.56</td>
+                                          <td>$443.21 </td>
+                                      </tr>
+                                      <tr>
+                                          <td>02/27/20</td>
+                                          <td>Electricity</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Rental</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Family Mart</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Eneos Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Netflix</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Sky TV</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>12/12/19</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>11/17/19</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>12/07/19</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>01/27/20</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/19</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/12</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr><tr>
+                                          <td>02/27/19</td>
+                                          <td>Mobile Gas Station</td>
+                                          <td>$34.56</td>
+                                          <td>$983.21 </td>
+                                      </tr>
+
+
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                      <script>
+
+                          $(document).ready(function () {
+                              $('#DtTable__Notification').DataTable();
+                              $('#DtTable__Notification_wrapper').find('label').each(function () {
+                                  $(this).parent().append($(this).children());
+                              });
+                              $('#DtTable__Notification_wrapper .dataTables_filter').find('input').each(function () {
+                                  const $this = $(this);
+                                  $this.attr("placeholder", "Search");
+                                  $this.removeClass('form-control-sm');
+                              });
+                              $('#DtTable__Notification_wrapper .dataTables_length').addClass('d-flex flex-row');
+                              $('#DtTable__Notification_wrapper .dataTables_filter').addClass('md-form');
+                              $('#DtTable__Notification_wrapper select').removeClass(
+                                      'custom-select custom-select-sm form-control form-control-sm');
+                              $('#DtTable__Notification_wrapper select').addClass('mdb-select');
+                              $('#DtTable__Notification_wrapper .mdb-select').materialSelect();
+                              $('#DtTable__Notification_wrapper .dataTables_filter').find('label').remove();
+                          });
+                      </script>

@@ -1,0 +1,17 @@
+code: Checking
+guiCode: |-
+  <#assign wp=JspTaglibs["/aps-core"]>
+  <div class="col-12 col-lg-4">
+                          <div class="CheckingCard">
+                              <div class="CheckingCard__header">
+                                  <img class="CheckingCard__icon" src="<@wp.imgURL />dashboard/Framecredit-card.png" />
+                                  <div class="CheckingCard__title"> Checking</div>
+                                  <div class="CheckingCard__value">.... 8494</div>
+                                  <div class="CheckingCard__action">
+                                      <i class="fas fa-ellipsis-v"></i>
+                                  </div>
+                              </div>
+                              <p class="CheckingCard__balance">$2,675.65</p>
+                              <p class="CheckingCard__balance-caption">balance</p>
+                          </div>
+                      </div>

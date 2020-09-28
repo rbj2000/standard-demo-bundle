@@ -1,0 +1,65 @@
+code: keycloak
+guiCode: >
+  <script
+  src="http://quickstart-kc-sales-demo.lab.entando.org/auth/js/keycloak.js"></script>
+
+  <script>
+    const beginKCLoad = (function() {
+      function createKcDispatcher(payload) {
+        return () => window.dispatchEvent(new CustomEvent('keycloak', { detail: payload }));
+      }
+
+      function initKeycloak() {
+        const keycloak = Keycloak('/entando-de-app/keycloak.json');
+
+        keycloak.onReady = () => {
+          createKcDispatcher({ eventType: 'onReady' })();
+        };
+        keycloak.onAuthSuccess = () => {
+          createKcDispatcher({ eventType: 'onAuthSuccess' });
+          localStorage.setItem('token', keycloak.token);
+        };
+        keycloak.onAuthError = () => {
+          createKcDispatcher({ eventType: 'onAuthError' });
+        };
+        keycloak.onAuthRefreshSuccess = () => {
+          createKcDispatcher({ eventType: 'onAuthRefreshSuccess' });
+          localStorage.setItem('token', keycloak.token);
+        };
+        keycloak.onAuthRefreshError = () => {
+          createKcDispatcher({ eventType: 'onAuthRefreshError' });
+        };
+        keycloak.onAuthLogout = () => {
+          createKcDispatcher({ eventType: 'onAuthLogout' });
+        };
+        keycloak.onTokenExpired = () => {
+          createKcDispatcher({ eventType: 'onTokenExpired' });
+        };
+        const onInit = (isAuth) => {
+          createKcDispatcher({ eventType: 'onInit' })();
+          if (isAuth) {
+            localStorage.setItem('token', keycloak.token);
+          }
+        };
+
+        window.entando = {
+          ...(window.entando || {}),
+          keycloak,
+        };
+
+        window.entando.keycloak
+          .init({
+            onLoad: 'check-sso',
+            promiseType: 'native',
+            enableLogging: true,
+          })
+          .then(onInit)
+          .catch(e => {
+            console.log(e);
+            console.log('Failed to initialize Keycloak');
+          });
+      }
+      return initKeycloak;
+    })();
+   beginKCLoad();
+  </script>

@@ -1,0 +1,129 @@
+code: seed_home
+description: Seed homepage
+configuration:
+  frames:
+    - pos: 0
+      description: brand
+      mainFrame: false
+      defaultWidget:
+        code: Brand-Logo
+        properties: null
+      sketch:
+        x1: 0
+        y1: 0
+        y2: 0
+        x2: 1
+    - pos: 1
+      description: navbar
+      mainFrame: false
+      sketch:
+        x1: 2
+        y1: 0
+        y2: 0
+        x2: 7
+    - pos: 2
+      description: search
+      mainFrame: false
+      defaultWidget:
+        code: search_form
+        properties: null
+      sketch:
+        x1: 8
+        y1: 0
+        y2: 0
+        x2: 9
+    - pos: 3
+      description: login widget
+      mainFrame: false
+      defaultWidget:
+        code: Login_buttons
+        properties: null
+      sketch:
+        x1: 10
+        y1: 0
+        y2: 0
+        x2: 11
+    - pos: 4
+      description: main banner
+      mainFrame: false
+      defaultWidget:
+        code: Breadcrumb
+        properties: null
+      sketch:
+        x1: 0
+        y1: 1
+        y2: 2
+        x2: 11
+    - pos: 5
+      description: colonna 12
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 3
+        y2: 4
+        x2: 11
+    - pos: 6
+      description: colonna 12
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 5
+        y2: 6
+        x2: 11
+    - pos: 7
+      description: colonna 12
+      mainFrame: true
+      sketch:
+        x1: 0
+        y1: 7
+        y2: 8
+        x2: 11
+    - pos: 8
+      description: colonna 12
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 9
+        y2: 10
+        x2: 11
+    - pos: 9
+      description: colonna 12
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 11
+        y2: 12
+        x2: 11
+    - pos: 10
+      description: colonna 12
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 13
+        y2: 14
+        x2: 11
+    - pos: 11
+      description: colonna 12
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 15
+        y2: 15
+        x2: 11
+    - pos: 12
+      description: footer
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 16
+        y2: 16
+        x2: 11
+    - pos: 13
+      description: footer
+      mainFrame: false
+      sketch:
+        x1: 0
+        y1: 17
+        y2: 17
+        x2: 11
+template: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n<#assign c=JspTaglibs[\"http://java.sun.com/jsp/jstl/core\"]>\r\n\r\n<html lang=\"en\">\r\n    <head>\r\n        <meta charset=\"utf-8\" />\r\n        <title>\r\n            <@wp.currentPage param=\"title\" /> - <@wp.i18n key=\"SALES_DEMO\" />\r\n        </title>\r\n        <meta name=\"viewport\" content=\"width=device-width,  user-scalable=no\" />\r\n        <meta name=\"description\" content=\"\" />\r\n        <meta name=\"author\" content=\"\" />\r\n        <link rel=\"icon\" href=\"<@wp.info key=\"systemParam\" paramName=\"applicationBaseURL\" />favicon.png\" type=\"image/png\" />\r\n        <@wp.fragment code=\"keycloak\" escapeXml=false/>\r\n\r\n        <!-- FA -->\r\n        <link rel=\"stylesheet\" href=\"<@wp.resourceURL />static/css/all.css\">\r\n        <!-- Bootstrap core -->\r\n        <link href=\"<@wp.resourceURL />static/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n        <!-- Material Design Bootstrap -->\r\n        <link href=\"<@wp.resourceURL />static/css/mdb.min.css\" rel=\"stylesheet\">\r\n        <!-- custom styles -->\r\n        <link rel=\"stylesheet\" href=\"<@wp.resourceURL />static/css/seed.css\" rel=\"stylesheet\">\r\n        <link rel=\"stylesheet\" href=\"<@wp.resourceURL />static/css/media-queries.css\" rel=\"stylesheet\">\r\n        <!-- JQuery -->\r\n        <script type=\"text/javascript\" src=\"<@wp.resourceURL />static/js/jquery.min.js\"></script>\r\n        <!-- Popper -->\r\n        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"></script>\r\n        \r\n        </head>\r\n        <body>\r\n        <div class=\"custom-navbar \">\r\n            <!--Navbar-->\r\n            <nav class=\"navbar fixed-top navbar-expand-lg navbar-light \">\r\n                <!-- Navbar brand -->\r\n                <@wp.show frame=0 />\r\n                <!-- Collapse button -->\r\n                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbar-mobile\"\r\n                        aria-controls=\"navbar-mobile\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n                    <span class=\"navbar-toggler-icon\"></span>\r\n                </button>\r\n                <!-- Collapsible content -->\r\n                <div class=\"collapse navbar-collapse\" id=\"navbar-mobile\">\r\n                    <!-- Links -->\r\n                    <@wp.show frame=1 />\r\n                   <ul class=\"navbar-nav mr-auto\">\r\n                        <!-- Dropdown -->\r\n                         <li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"<@wp.url page=\"homepage\" />\">Home</a>\r\n                        </li>\r\n                        <li class=\"nav-item dropdown\">\r\n                            <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\"  aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                                Checking & Savings\r\n                            </a>\r\n                            <div class=\"dropdown-menu dropdown-primary\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n                                <div class=\"dropdown-content-wrapper\">\r\n                                    <div class=\"row dropdown-wrapper\">\r\n                                        <div class=\"col-6  dropdown-col\">\r\n                                            <a class=\"checking\" href=\"<@wp.url page=\"interest\" />\"><span>Interest Checking</span></a>\r\n                                            <div class=\"savings\">High Yield Savings</div>\r\n                                        </div>\r\n                                        <div class=\"col-6 dropdown-right\">\r\n                                            <div class=\"debit-cards\">Debit Cards</div>\r\n                                            <div class=\"send-money\">Send Money</div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"row justify-content-around dropdown-wrapper-footer\">\r\n                                        <div class=\"col-6 dropdown-footer-heading\">\r\n                                            Company\r\n                                            <div class=\"row \">\r\n                                                <div class=\"col-6 dropdown-footer-content\">\r\n                                                    <div>About</div>\r\n                                                    <div>Service</div>\r\n                                                    <div>Careers</div>\r\n                                                    <div>Blog</div>\r\n                                                </div>\r\n                                                <div class=\"col-6 dropdown-footer-content\">\r\n                                                    <div>Media</div>\r\n                                                    <div>Terms</div>\r\n                                                    <div>Privacy</div>\r\n                                                    <div>Cookies</div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"col-6 dropdown-footer-heading\">\r\n                                            Customers\r\n                                            <div class=\"row \">\r\n                                                <div class=\"col-12 col-lg-6 dropdown-footer-content\">\r\n                                                    <div>Travel</div>\r\n                                                    <div>Pricing</div>\r\n                                                    <div>Account</div>\r\n                                                    <div>Help</div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </li>\r\n                       \r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"<@wp.url page=\"credit_card\" />\">Credit Cards</a>\r\n                        </li>\r\n                        \r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"<@wp.url page=\"seed_insurances\" />\">Insurances</a>\r\n                        </li>\r\n                       \r\n                        <#if (Session.currentUser != \"guest\")>\r\n                              <li class=\"nav-item\">\r\n                                  <a class=\"nav-link\" href=\"<@wp.url page=\"mortgages_and_lending\" />\">Mortgages and Lending</a>\r\n\t                          </li>\r\n                              <li class=\"nav-item\">\r\n                                  <a class=\"nav-link\" href=\"<@wp.url page=\"dashboard\" />\"><@wp.i18n key=\"MY_DASHBOARD\" /></a>\r\n                              </li>\r\n                        </#if>\r\n                        \r\n                    </ul>\r\n                   <div class=\"d-block d-sm-block d-md-none \">\r\n                      \r\n                      <@wp.show frame=2 />\r\n                      <@wp.show frame=3 />\r\n                      \r\n                    </div>\r\n                </div>\r\n                <div class=\"d-none d-lg-block d-xl-block\">\r\n                 <div class=\"d-flex\">\r\n                      <@wp.show frame=2 />\r\n                      <@wp.show frame=3 />\r\n                      </div>\r\n                </div>\r\n                <!-- Collapsible content -->\r\n                </nav>\r\n       \r\n        <@wp.show frame=4 />\r\n        <@wp.show frame=5 />\r\n        <@wp.show frame=6 />\r\n        <@wp.show frame=7 />\r\n        <@wp.show frame=8 />\r\n        <@wp.show frame=9 />\r\n        <@wp.show frame=10 />\r\n        <@wp.show frame=11 />\r\n        <@wp.show frame=12 />\r\n        <@wp.show frame=13 />\r\n\r\n    </div>\r\n        \r\n        <!-- Bootstrap core js -->\r\n        <script type=\"text/javascript\"  src=\"<@wp.resourceURL />static/js/bootstrap.min.js\"></script>\r\n        <!-- MDB core js -->\r\n        <script type=\"text/javascript\" src=\"<@wp.resourceURL />static/js/mdb.min.js\"></script>\r\n\r\n    </body>\r\n</html>\r\n"

@@ -1,0 +1,12 @@
+code: credit_card
+parentCode: landing
+titles:
+  en: Credit card
+  it: Carta di credito
+pageModel: seed_home
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

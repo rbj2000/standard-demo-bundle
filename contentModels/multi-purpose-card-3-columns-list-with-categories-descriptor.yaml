@@ -1,0 +1,4 @@
+id: 106
+contentType: MPC
+description: Multi-Purpose Card 3 Columns  List with categories
+contentShape: "<div class=\"card-insurance with-categories\">\r\n<a href=\"$content.getContentOnPageLink('products_detail')&modelId=105\" class=\"card-clickable\">\r\n                                \r\n    <img src=\"$content.image.getImagePath('0')\"  alt=\"$content.image.text\">\r\n    \r\n      <div class=\"category\">\r\n                #foreach ($contentCategory in $content.getCategories())\r\n                $contentCategory.title\r\n                #end \r\n     </div>\r\n    \r\n     $content.title.text\r\n     $content.subtitle.text\r\n     \r\n\r\n    #if($content.links.size() > 0)\r\n    #foreach ($item in $content.links)     \r\n    <a class=\"btn btn-green\" href=\"$item.destination\" >$item.text</a>\r\n    #end\r\n    #end\r\n   </a> \r\n </div>"

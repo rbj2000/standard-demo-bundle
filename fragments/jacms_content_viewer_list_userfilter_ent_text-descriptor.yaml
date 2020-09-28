@@ -1,0 +1,2 @@
+code: jacms_content_viewer_list_userfilter_ent_Text
+guiCode: "<#assign wp=JspTaglibs[\"/aps-core\"]>\r\n<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >\r\n<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >\r\n<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >\r\n\r\n<div class=\"form-group\">\r\n  <input name=\"${formFieldNameVar}\" id=\"${formFieldNameVar}\" value=\"${formFieldValue}\" type=\"text\" class=\"form-control\" placeholder=\"<@wp.i18n key=\"TEXT_PLACEHOLDER\" />\"/>\r\n </div>\r\n"

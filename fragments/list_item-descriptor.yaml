@@ -1,0 +1,25 @@
+code: list_item
+guiCode: >-
+  <#assign wp=JspTaglibs[ "/aps-core"]>
+
+  <link rel="stylesheet" type="text/css" href="<@wp.resourceURL
+  />widgets/list-item/css/main.css">
+
+  <link rel="stylesheet" type="text/css" href="<@wp.resourceURL
+  />widgets/list-item/css/vendor.css">
+
+  <script async src="<@wp.resourceURL
+  />widgets/list-item/js/runtime.js"></script>
+
+  <script async src="<@wp.resourceURL
+  />widgets/list-item/js/vendor.js"></script>
+
+  <script async src="<@wp.resourceURL />widgets/list-item/js/main.js"></script>
+
+  <@wp.currentWidget param="config" configParam="icon" var="iconString"/>
+
+  <@wp.currentWidget param="config" configParam="title" var="titleString"/>
+
+  <@wp.currentWidget param="config" configParam="count" var="countNumber"/>
+
+  <list-item icon="${iconString}" title="${titleString}"/>
